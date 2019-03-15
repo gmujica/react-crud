@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import firebase from 'firebase';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+firebase.initializeApp({
+    apiKey: "AIzaSyA_WRtoXFIxrbMRSUjld80GpqiBOs0_miQ",
+    authDomain: "react-crud-48f71.firebaseapp.com",
+    databaseURL: "https://react-crud-48f71.firebaseio.com",
+    projectId: "react-crud-48f71",
+    storageBucket: "react-crud-48f71.appspot.com",
+    messagingSenderId: "939496841206"
+});
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
