@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import FileUpload from './FileUpload.jsx'
 
 class App extends Component {
   constructor () {
@@ -45,9 +46,10 @@ class App extends Component {
     if(this.state.user) {
       return (
         <div>
-          <img width="100%" src={this.state.user.photoURL} alt={this.state.user.displayName} />
+          <img width="100" src={this.state.user.photoURL} alt={this.state.user.displayName} />
           <p>Hola {this.state.user.displayName}!</p>
           <button onClick={this.handleLogout}>Salir</button>
+          <FileUpload />
         </div>
       );
     }else {
@@ -61,7 +63,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p className="App-intro">
             {this.renderLoginButton()}
           </p>
